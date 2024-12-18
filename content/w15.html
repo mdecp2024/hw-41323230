@@ -151,7 +151,39 @@ upto = 100
 for i in range(init, upto+1):
     sum = sum + i
 print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))</pre>
-<pre><br/><br/></pre>
+<pre><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323230/1f624c4d07b551134c1fc02867505df2/raw/85c8a26d3e03e91d598c12f968ade1430491d8ca/w15-2.py">addto</a></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(start, end):
+    sum = 0
+    for i in range(start, end + 1):
+        sum += i
+    return sum
+
+# 使用函式進行計算
+result = addto(1, 100)
+print("從1累加到100的總和是:", result)</pre>
+<pre><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323230/b2bae3c359e5ef615d93abbdf39aec1e/raw/417c14b554062efaba20f3ea32b0c7b1b4c566a9/w15-3.py">add_only_even</a></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def add_only_even(start, end):
+    sum = 0
+    for i in range(start, end + 1):
+        if i % 2 == 0:  # Check if the number is even
+            sum += i
+    return sum
+
+# 使用函式進行計算
+result = add_only_even(1, 100)
+print("從1累加到100的偶數總和是:", result)</pre>
+<pre><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323230/4adff390109bae69c331d4159940a192/raw/31d61bc019f177de8ddfb4d41c0c2585d3845840/w15-4.py">add_avoid_8</a></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def add_avoid_8(start, end):
+    total = 0
+    for i in range(start, end + 1):
+        if '8' not in str(i):  # 將數字轉成字串檢查是否包含 '8'
+            total += i
+    return total
+
+# 測試範例
+result = add_avoid_8(1, 100)
+print("從 1 累加到 100，避開數字包含 '8' 的總和是:", result)</pre>
+<pre><br/><br/><br/><br/><br/></pre>
 <p></p><br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w13_hw.html'>Next</a> >> w13_hw</div>
         
     <!-- footer -->
